@@ -1,0 +1,11 @@
+services:
+  web:
+    build:
+      context: ./apps/web
+    ports:
+      - "4173:4173"
+  api:
+    build:
+      context: ./apps/api
+    ports:
+      - "4000:4000"

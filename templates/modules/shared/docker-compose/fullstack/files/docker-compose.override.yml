@@ -1,0 +1,7 @@
+services:
+  web:
+    environment:
+      - NODE_ENV=development
+  api:
+    environment:
+      - PORT=4000
