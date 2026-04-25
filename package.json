@@ -1,0 +1,49 @@
+{
+  "name": "project-starter",
+  "version": "0.1.0",
+  "description": "Composable CLI to bootstrap modern frontend, backend, and fullstack projects.",
+  "license": "MIT",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "bin": {
+    "project-starter": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "templates",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "rm -rf dist",
+    "dev": "node --import tsx ./src/index.ts",
+    "prepublishOnly": "npm run build",
+    "start": "node dist/index.js",
+    "test": "node --import tsx --test test/**/*.test.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "keywords": [
+    "cli",
+    "starter",
+    "scaffold",
+    "generator",
+    "typescript",
+    "templates"
+  ],
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "dependencies": {
+    "fs-extra": "^11.3.0",
+    "kolorist": "^1.8.0",
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.15.3",
+    "@types/prompts": "^2.4.9",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  }
+}
